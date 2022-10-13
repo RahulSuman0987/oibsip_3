@@ -1,0 +1,150 @@
+/* IMPORTS */
+
+@font-face {
+    font-family: font1;
+    src: url(./fonts/font1.ttf);
+}
+
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgray;
+    font-family: font1, sans-serif;
+    transition: 0.25s ease-in-out;
+    overflow-x: hidden;
+    /* Make text unselectable */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+body video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+/* Hide the video control bar */
+
+body video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+
+/* SPECIFIC SETTINGS */
+
+.form-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.picture {
+    margin-left: 20px;
+    width: 40px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+input {
+    border: none;
+    background: rgba(255, 255, 255, 0.258);
+    outline: none;
+    padding: 1rem;
+    color: whitesmoke;
+    font-family: font1, sans-serif;
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: whitesmoke;
+    font-family: font1, sans-serif;
+}
+
+ul {
+    margin-top: 3rem;
+    list-style: none;
+    transition: 0.3s ease;
+}
+
+li {
+    font-size: 1.3rem;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+}
+
+li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.checked {
+    transition: 0.6s ease;
+}
+
+.checked::before {
+    content: '✓';
+    position: absolute;
+    color: orange;
+    font-weight: 700;
+}
+
+.checked:hover {
+    text-decoration: line-through orange;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+    .form-container {
+        display: grid;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    li {
+        overflow-wrap: anywhere;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        overflow: hidden;
+    }
+}

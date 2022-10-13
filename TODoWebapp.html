@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png" />
+    <link rel="manifest" href="./icons/site.webmanifest" />
+    <link rel="stylesheet" href="./to-do-webapp.css" />
+    <title>Todo List</title>
+    <script src="https://kit.fontawesome.com/fc8cb22272.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <video controls="controls" poster="./images/background.png" src="./video/Pexels.mp4" type="video/mp4" loop muted autoplay preload="auto">
+			Your browser doesn't support the video tag
+		</video>
+
+    <div class="form-container">
+        <div class="title">
+            <h1>Todo List</h1>
+            <img src="./images/giphy.gif" alt="done" class="picture" />
+        </div>
+
+        <form action="">
+            <input type="text" id="item" placeholder="Thing to be done" autocomplete="off" minlength="2" maxlength="100" />
+        </form>
+        <ul id="list"></ul>
+    </div>
+
+    <script src="./to-dowebapp.js"></script>
+</body>
+
+</html>
